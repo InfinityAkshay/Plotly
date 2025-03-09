@@ -1,0 +1,41 @@
+---
+title: "MTCARS Dataset: MPG vs WT"
+author: "Akshay"
+date: "`r Sys.Date()`"
+output: 
+    ioslides_presentation:
+        widescreen: true
+        smaller: true
+---
+
+```{r setup, include=FALSE}
+library(plotly)
+library(ggplot2)
+```
+
+## What is this?
+We shall plot all the data points of the `mtcars` dataset and fit a linear regression line to it.
+
+- `x-axis`: Weight of the car
+- `y-axis`: Miles per gallon (MPG)
+
+
+## MPG vs WT Plot
+
+```{r, echo=FALSE}
+# Load the mtcars dataset
+data(mtcars)
+
+# Create a scatter plot with regression line
+p <- ggplot(mtcars, aes(x = wt, y = mpg)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE)
+
+# Convert the ggplot to a plotly object
+ggplotly(p)
+```
+
+
+## Thank You
+
+Githib repo for this slide can be found [here](add link here)
