@@ -38,4 +38,4 @@ ggplotly(p)
 
 ## Thank You
 
-Githib repo for this slide can be found [here](add link here)
+Githib repo for this slide can be found [here](https://github.com/InfinityAkshay/Plotly)
